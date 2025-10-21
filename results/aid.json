@@ -1,0 +1,13 @@
+{
+  "category": "aid",
+  "dataset": "jonathan-roberts1/AID_MultiLabel",
+  "split": "train",
+  "mean_slope": -2.291863153572338,
+  "std_slope": 0.30192721703186254,
+  "valid_images": 200,
+  "total_images": 200,
+  "sample_size": 200,
+  "target_size": 256,
+  "min_freq": 0.05,
+  "max_freq": 0.5
+}

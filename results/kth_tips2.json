@@ -1,0 +1,13 @@
+{
+  "category": "kth_tips2",
+  "dataset": "imagefolder:/tmp/kthtips2b/KTH-TIPS2-b",
+  "split": "train",
+  "mean_slope": -2.4702103847252186,
+  "std_slope": 0.31913383032043324,
+  "valid_images": 200,
+  "total_images": 200,
+  "sample_size": 200,
+  "target_size": 256,
+  "min_freq": 0.05,
+  "max_freq": 0.5
+}

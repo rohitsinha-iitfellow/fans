@@ -1,0 +1,13 @@
+{
+  "category": "crystal_lattice_tems",
+  "dataset": "kvriza8/microscopy_images",
+  "split": "train",
+  "mean_slope": -2.461888150554772,
+  "std_slope": 0.5939590258365435,
+  "valid_images": 200,
+  "total_images": 200,
+  "sample_size": 200,
+  "target_size": 256,
+  "min_freq": 0.05,
+  "max_freq": 0.5
+}

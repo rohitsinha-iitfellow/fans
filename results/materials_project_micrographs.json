@@ -1,0 +1,13 @@
+{
+  "category": "materials_project_micrographs",
+  "dataset": "kvriza8/microscopy_images",
+  "split": "train",
+  "mean_slope": -2.3848203742023415,
+  "std_slope": 0.5927203586035934,
+  "valid_images": 47,
+  "total_images": 47,
+  "sample_size": null,
+  "target_size": 256,
+  "min_freq": 0.05,
+  "max_freq": 0.5
+}

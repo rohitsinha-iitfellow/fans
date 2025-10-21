@@ -1,0 +1,13 @@
+{
+  "category": "resisc45",
+  "dataset": "timm/resisc45",
+  "split": "train",
+  "mean_slope": -2.282481716073451,
+  "std_slope": 0.42676014607503593,
+  "valid_images": 200,
+  "total_images": 200,
+  "sample_size": 200,
+  "target_size": 256,
+  "min_freq": 0.05,
+  "max_freq": 0.5
+}
