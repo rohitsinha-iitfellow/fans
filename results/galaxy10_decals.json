@@ -1,0 +1,9 @@
+{
+  "dataset": "matthieulel/galaxy10_decals",
+  "subset": null,
+  "split": "train",
+  "mean_slope": -1.9387954297895433,
+  "std_slope": 0.45882222173405696,
+  "valid_images": 100,
+  "total_images": 100
+}

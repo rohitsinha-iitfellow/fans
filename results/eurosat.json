@@ -1,0 +1,9 @@
+{
+  "dataset": "vicm0r/eurosat",
+  "subset": null,
+  "split": "train",
+  "mean_slope": -4.169666883649485,
+  "std_slope": 0.30260559660621783,
+  "valid_images": 100,
+  "total_images": 100
+}
