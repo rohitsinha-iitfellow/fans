@@ -1,0 +1,13 @@
+{
+  "category": "spacenet",
+  "dataset": "imagefolder:/tmp/spacenet9/train",
+  "split": "train",
+  "mean_slope": -3.0603520208286095,
+  "std_slope": 0.23386444862056346,
+  "valid_images": 200,
+  "total_images": 200,
+  "sample_size": 200,
+  "target_size": 256,
+  "min_freq": 0.05,
+  "max_freq": 0.5
+}

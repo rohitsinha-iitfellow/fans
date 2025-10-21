@@ -1,0 +1,13 @@
+{
+  "category": "adobe_textures",
+  "dataset": "local:/tmp/adobe_textures/train/*.png",
+  "split": "all",
+  "mean_slope": -1.466190390038811,
+  "std_slope": 0.4365894681350637,
+  "valid_images": 171,
+  "total_images": 171,
+  "sample_size": null,
+  "target_size": 256,
+  "min_freq": 0.05,
+  "max_freq": 0.5
+}

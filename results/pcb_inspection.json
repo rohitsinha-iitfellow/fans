@@ -1,0 +1,13 @@
+{
+  "category": "pcb_inspection",
+  "dataset": "Francesco/printed-circuit-board",
+  "split": "train",
+  "mean_slope": -2.278410177427693,
+  "std_slope": 0.2265235105177314,
+  "valid_images": 200,
+  "total_images": 200,
+  "sample_size": 200,
+  "target_size": 256,
+  "min_freq": 0.05,
+  "max_freq": 0.5
+}

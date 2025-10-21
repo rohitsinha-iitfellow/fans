@@ -1,0 +1,13 @@
+{
+  "category": "sem_micrographs",
+  "dataset": "kvriza8/microscopy_images",
+  "split": "train",
+  "mean_slope": -2.5405781073504268,
+  "std_slope": 0.6404196264858922,
+  "valid_images": 200,
+  "total_images": 200,
+  "sample_size": 200,
+  "target_size": 256,
+  "min_freq": 0.05,
+  "max_freq": 0.5
+}
