@@ -1,0 +1,9 @@
+{
+  "dataset": "mmenendezg/pneumonia_x_ray",
+  "subset": null,
+  "split": "train",
+  "mean_slope": -2.8713601772367396,
+  "std_slope": 0.132903638761312,
+  "valid_images": 100,
+  "total_images": 100
+}

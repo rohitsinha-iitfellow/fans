@@ -1,0 +1,9 @@
+{
+  "dataset": "dream-textures/textures-color-1k",
+  "subset": null,
+  "split": "train",
+  "mean_slope": -1.5606905578386463,
+  "std_slope": 0.7502127260364588,
+  "valid_images": 99,
+  "total_images": 100
+}
