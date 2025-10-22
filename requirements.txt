@@ -2,3 +2,8 @@ datasets
 pillow
 numpy
 tqdm
+torch
+torchvision
+torchaudio
+torch-fidelity
+lpips
