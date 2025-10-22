@@ -8,6 +8,24 @@ This repository collects utilities that support Frequency-Aware Adaptive Noise S
 pip install -r requirements.txt
 ```
 
+## Training with local images
+
+The training script accepts either a dataset identifier (for Hugging Face datasets) or a
+directory of images. To train on a folder of local images, point the `--data-dir`
+argument at the directory that contains the files:
+
+```bash
+python train.py \
+  --data-dir /path/to/images \
+  --outdir checkpoints/experiment \
+  --epochs 10 \
+  --batch-size 8
+```
+
+The loader recursively scans the directory for common image extensions (PNG, JPG, TIFF,
+etc.), resizes them to the requested `--image-size`, and feeds them to the diffusion
+model during training.
+
 ## Radial power spectrum CLI
 
 `scripts/compute_radial_power_slope.py` downloads an image dataset from the Hugging Face Hub and estimates the slope of its radial power spectrum in log–log space.

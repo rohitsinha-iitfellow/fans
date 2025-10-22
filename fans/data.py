@@ -20,18 +20,23 @@ except Exception:  # pragma: no cover - optional dependency
     load_dataset = None
 
 
+_IMAGE_EXTENSIONS = (".png", ".jpg", ".jpeg", ".bmp", ".tif", ".tiff")
+
+
 def _resolve_image_paths(path: str) -> list[Path]:
     if any(ch in path for ch in "*?[]"):
-        return [Path(p) for p in sorted(glob.glob(path))]
-    p = Path(path)
-    if p.is_dir():
-        candidates = []
-        for ext in ("*.png", "*.jpg", "*.jpeg", "*.bmp", "*.tif", "*.tiff"):
-            candidates.extend(sorted(p.glob(ext)))
-        return sorted(candidates)
-    if p.is_file():
-        return [p]
-    raise FileNotFoundError(path)
+        candidates = [Path(p) for p in glob.glob(path, recursive=True)]
+    else:
+        p = Path(path)
+        if p.is_dir():
+            candidates = [f for f in p.rglob("*") if f.is_file()]
+        elif p.is_file():
+            candidates = [p]
+        else:
+            raise FileNotFoundError(path)
+
+    images = [c for c in candidates if c.suffix.lower() in _IMAGE_EXTENSIONS]
+    return sorted(images)
 
 
 def _open_image(path: Path) -> Image.Image:
