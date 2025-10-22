@@ -22,7 +22,18 @@ from fans.utils_fft import compute_dataset_band_profile, ensure_band_state, radi
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Train a diffusion model with optional FANS noise")
-    parser.add_argument("--data", type=str, required=True, help="Dataset specifier or path")
+    parser.add_argument(
+        "--data",
+        type=str,
+        default=None,
+        help="Dataset specifier or path (Hugging Face dataset, local:<pattern>, or directory)",
+    )
+    parser.add_argument(
+        "--data-dir",
+        type=str,
+        default=None,
+        help="Path to a local directory that contains the training images",
+    )
     parser.add_argument("--outdir", type=str, required=True, help="Directory to store checkpoints")
     parser.add_argument("--image-size", type=int, default=256)
     parser.add_argument("--epochs", type=int, default=2)
@@ -37,7 +48,21 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--device", type=str, default="auto")
     parser.add_argument("--base-channels", type=int, default=64)
     parser.add_argument("--channel-mults", type=str, default="1,2,4")
-    return parser.parse_args()
+    args = parser.parse_args()
+
+    if args.data and args.data_dir:
+        parser.error("Specify either --data or --data-dir, not both")
+
+    if args.data_dir and not args.data:
+        args.data = args.data_dir
+
+    if not args.data:
+        parser.error("Either --data or --data-dir must be provided")
+
+    # keep the serialized config compact by omitting the alias
+    args.data_dir = None
+
+    return args
 
 
 def prepare_fans(
