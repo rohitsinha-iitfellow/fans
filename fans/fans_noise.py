@@ -65,7 +65,12 @@ class FANSNoiseShaper:
     def weights_at(self, t01: torch.Tensor) -> torch.Tensor:
         """Return softmax-normalised band weights for time ``t01``."""
 
-        t01 = torch.as_tensor(t01, dtype=torch.float32, device=self.g_b.device)
+        device = (
+            t01.device
+            if isinstance(t01, torch.Tensor) and t01.device.type != "cpu"
+            else self.g_b.device
+        )
+        t01 = torch.as_tensor(t01, dtype=torch.float32, device=device)
         if t01.ndim == 0:
             t01 = t01.unsqueeze(0)
         lamb = torch.linspace(0.0, 1.0, steps=len(self.bands), device=t01.device)
